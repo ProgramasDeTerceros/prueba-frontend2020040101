@@ -15,7 +15,7 @@ export class HouseService {
 
   constructor() {}
 
-  getList(): Observable<HouseModel> {
-    return of(this.Houses).pipe(map((data) => <HouseModel>data));
+  getList(): Observable<HouseModel[]> {
+    return of(this.Houses).pipe(map((data) => <HouseModel[]>data));
   }
 }

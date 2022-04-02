@@ -11,10 +11,7 @@ export class ApiEscuelaService {
   constructor(private _http: HttpClient) {}
 
   GetQuery(query: string): Observable<object> {
-    const header = new HttpHeaders({
-      "Content-Type": "application/json",
-    });
-    return this._http.get(`${this._url}${query}`, { headers: header });
+    return this._http.get(`${this._url}${query}`);
   }
   PostQuery(query: string, data: any): Observable<object> {
     const header = new HttpHeaders({

@@ -6,17 +6,19 @@ import { TablePersonajeComponent } from "./table-personaje/table-personaje.compo
 import { NavbarComponent } from "./navbar/navbar.component";
 import { AppRoutingModule } from "src/app-routing/app-routing.module";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { LoadingComponent } from './loading/loading.component';
-import { SelectComponent } from './select/select.component';
+import { LoadingComponent } from "./loading/loading.component";
+import { SelectComponent } from "./select/select.component";
 
 const declarations = [
   HeaderComponent,
   FooterComponent,
   TablePersonajeComponent,
   NavbarComponent,
+  LoadingComponent,
+  SelectComponent,
 ];
 @NgModule({
-  declarations: [...declarations, LoadingComponent, SelectComponent],
+  declarations: [...declarations],
   imports: [CommonModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   exports: [...declarations],
 })
