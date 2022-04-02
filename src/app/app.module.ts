@@ -7,6 +7,7 @@ import { SeccionPersonajeComponent } from "./modules/seccion-personaje/seccion-p
 import { SeccionEstudiantesComponent } from "./modules/seccion-estudiantes/seccion-estudiantes.component";
 import { SeccionProfesoresComponent } from "./modules/seccion-profesores/seccion-profesores.component";
 import { ComponentsModule } from "./modules/components/components.module";
+import { PipesModule } from "./shared/pipes/pipes.module";
 
 @NgModule({
   declarations: [
@@ -15,7 +16,13 @@ import { ComponentsModule } from "./modules/components/components.module";
     SeccionEstudiantesComponent,
     SeccionProfesoresComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule,ComponentsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    ComponentsModule,
+    PipesModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -13,8 +13,9 @@
 		<tr *ngFor="let dat of this.data">
 			<td>{{dat.name}}</td>
 			<td>{{dat.patronus}}</td>
-			<td>{{dat.yearOfBirth}}</td>
-			<td>{{dat.image}}</td>
+			<td>{{dat.yearOfBirth |calEdad }}</td>
+			<td><img [src]='dat.image | img'>
+			</td>
 		</tr>
 	</tbody>
 </table>

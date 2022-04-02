@@ -8,6 +8,7 @@ import { AppRoutingModule } from "src/app-routing/app-routing.module";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { LoadingComponent } from "./loading/loading.component";
 import { SelectComponent } from "./select/select.component";
+import { PipesModule } from "src/app/shared/pipes/pipes.module";
 
 const declarations = [
   HeaderComponent,
@@ -19,7 +20,13 @@ const declarations = [
 ];
 @NgModule({
   declarations: [...declarations],
-  imports: [CommonModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
+  imports: [
+    CommonModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    PipesModule,
+  ],
   exports: [...declarations],
 })
 export class ComponentsModule {}

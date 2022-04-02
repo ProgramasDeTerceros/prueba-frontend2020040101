@@ -5,7 +5,7 @@ export class PersonajeModel {
   gender?: Gender;
   house?: House;
   dateOfBirth?: string;
-  yearOfBirth?: number | string;
+  yearOfBirth?: string;
   wizard?: boolean;
   ancestry?: Ancestry;
   eyeColour?: EyeColour;
