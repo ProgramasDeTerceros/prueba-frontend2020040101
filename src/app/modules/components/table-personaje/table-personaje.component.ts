@@ -7,7 +7,7 @@ import { PersonajeModel } from "src/app/shared/models/personaje.model";
   styleUrls: ["./table-personaje.component.scss"],
 })
 export class TablePersonajeComponent implements OnInit {
-  @Input() data: PersonajeModel[]=[];
+  @Input() data?: PersonajeModel[];
 
   constructor() {}
 

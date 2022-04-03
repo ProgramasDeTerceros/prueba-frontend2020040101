@@ -8,9 +8,8 @@ import { PersonajeModel } from "src/app/shared/models/personaje.model";
   styleUrls: ["./seccion-profesores.component.scss"],
 })
 export class SeccionProfesoresComponent implements OnInit {
-  public profesores: PersonajeModel[];
+  public profesores?: PersonajeModel[];
   constructor(private _personajeService: PersonajeService) {
-    this.profesores = [];
   }
 
   ngOnInit(): void {

@@ -8,7 +8,7 @@ import { HouseModel } from "src/app/shared/models/house.model";
 })
 export class SelectComponent implements OnInit {
   @Input() labelName: string = "";
-  @Input() data: HouseModel[] = [];
+  @Input() data?: HouseModel[];
 
   @Output() onChangeCasa: EventEmitter<string>;
   constructor() {

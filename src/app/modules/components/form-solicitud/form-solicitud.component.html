@@ -1,0 +1,38 @@
+<form class="col-8 offset-2 text-left" *ngIf="data" autocomplete="off" (ngSubmit)="onAction()" [formGroup]="forma">
+
+
+	<div class="form-group row">
+		<label class="col-4 col-form-label" for="id">nombre:</label>
+		<div class="col-8">
+			<input class="form-control" type="text" placeholder="nombre" formControlName="name"
+				[ngClass]="{'is-invalid':nameInvalid}">
+			<span class="text-danger" *ngIf="nameInvalid">
+				especifique Nombre del Estudiante
+			</span>
+		</div>
+	</div>
+	<div class="form-group row">
+		<label class="col-4 col-form-label" for="id">patronus:</label>
+		<div class="col-8">
+			<input class="form-control" type="text" placeholder="patronus" formControlName="patronus"
+				[ngClass]="{'is-invalid':patronusInvalid}">
+			<span class="text-danger" *ngIf="patronusInvalid">
+				escriba un patronus valido
+			</span>
+		</div>
+	</div>
+
+	<div class="form-group row">
+		<label class="col-4 col-form-label" for="id">fecha de nacimiento:</label>
+		<div class="col-8">
+			<input class="form-control" type="text" placeholder="1990" formControlName="dateOfBirth"
+				[ngClass]="{'is-invalid':dateOfBirthInvalid}">
+			<span class="text-danger" *ngIf="dateOfBirthInvalid">
+				digite una fecha valida
+			</span>
+		</div>
+	</div>
+	<div class="form-group row">
+		<app-button-a class="col-md-8 input-group" (onCancel)="cancel()"></app-button-a>
+	</div>
+</form>

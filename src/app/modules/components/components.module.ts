@@ -9,6 +9,10 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { LoadingComponent } from "./loading/loading.component";
 import { SelectComponent } from "./select/select.component";
 import { PipesModule } from "src/app/shared/pipes/pipes.module";
+import { NavbarSolicitudComponent } from "./navbar-solicitud/navbar-solicitud.component";
+import { ButtonAComponent } from "./button-a/button-a.component";
+import { ButtonComponent } from "./button/button.component";
+import { FormSolicitudComponent } from "./form-solicitud/form-solicitud.component";
 
 const declarations = [
   HeaderComponent,
@@ -17,6 +21,10 @@ const declarations = [
   NavbarComponent,
   LoadingComponent,
   SelectComponent,
+  NavbarSolicitudComponent,
+  ButtonAComponent,
+  ButtonComponent,
+  FormSolicitudComponent,
 ];
 @NgModule({
   declarations: [...declarations],

@@ -10,14 +10,12 @@ import { PersonajeModel } from "src/app/shared/models/personaje.model";
   styleUrls: ["./seccion-personaje.component.scss"],
 })
 export class SeccionPersonajeComponent implements OnInit {
-  public personajes: PersonajeModel[];
-  public casas: HouseModel[];
+  public personajes?: PersonajeModel[]=[]; 
+  public casas?: HouseModel[];
   constructor(
     private _personajeService: PersonajeService,
     private _houseService: HouseService
   ) {
-    this.personajes = [];
-    this.casas = [];
   }
 
   ngOnInit(): void {

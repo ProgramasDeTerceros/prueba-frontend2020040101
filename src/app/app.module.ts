@@ -8,6 +8,8 @@ import { SeccionEstudiantesComponent } from "./modules/seccion-estudiantes/secci
 import { SeccionProfesoresComponent } from "./modules/seccion-profesores/seccion-profesores.component";
 import { ComponentsModule } from "./modules/components/components.module";
 import { PipesModule } from "./shared/pipes/pipes.module";
+import { SolicitudEstudianteComponent } from './modules/solicitud-estudiante/solicitud-estudiante.component';
+import { SolicitudesListComponent } from './modules/solicitudes-list/solicitudes-list.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +17,8 @@ import { PipesModule } from "./shared/pipes/pipes.module";
     SeccionPersonajeComponent,
     SeccionEstudiantesComponent,
     SeccionProfesoresComponent,
+    SolicitudEstudianteComponent,
+    SolicitudesListComponent,
   ],
   imports: [
     BrowserModule,
