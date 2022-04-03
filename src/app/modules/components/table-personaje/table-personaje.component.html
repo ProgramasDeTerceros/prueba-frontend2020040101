@@ -1,8 +1,9 @@
 <app-loading *ngIf="!data"></app-loading>
 <h2 *ngIf="data && data.length == 0 ">No se encontraron data</h2>
-<table class="table table-sm" *ngIf="data && data.length > 0 ">
+<table class="table table-striped" *ngIf="data && data.length > 0 ">
 	<thead>
 		<tr>
+			<th scope="col">#</th>
 			<th scope="col">nombre</th>
 			<th scope="col">patronus</th>
 			<th scope="col">edad</th>
@@ -10,7 +11,9 @@
 		</tr>
 	</thead>
 	<tbody>
-		<tr *ngFor="let dat of this.data">
+		<tr *ngFor="let dat of this.data; let i = index ">
+
+			<th scope="row">{{i+1}}</th>
 			<td>{{dat.name}}</td>
 			<td>{{dat.patronus}}</td>
 			<td>{{dat.yearOfBirth |calEdad }}</td>

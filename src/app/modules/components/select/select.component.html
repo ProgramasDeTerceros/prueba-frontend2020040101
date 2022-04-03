@@ -1,6 +1,9 @@
 <app-loading *ngIf="!data"></app-loading>
 <h2 *ngIf="data && data.length == 0 ">No se encontraron casas</h2>
-
-<select (change)="newCasa($event)">
-	<option *ngFor="let dat of this.data" [value]="dat.name">{{dat.name}}</option>
-</select>
+<label>
+{{labelName}}
+	<select (change)="newCasa($event)">
+		<option value="">Seleccinar</option>
+		<option *ngFor="let dat of this.data" [value]="dat.name">{{dat.name}}</option>
+	</select>
+</label>

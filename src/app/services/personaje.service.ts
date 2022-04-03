@@ -20,4 +20,19 @@ export class PersonajeService {
       })
     );
   }
+  getListEstudiantes(): Observable<PersonajeModel[]> {
+    return this._api.GetQuery(`${this._urlB}`).pipe(
+      map((data: any) => {
+        return <Array<PersonajeModel>>data;
+      })
+    );
+  }
+
+  getListProfesores(): Observable<PersonajeModel[]> {
+    return this._api.GetQuery(`${this._urlC}`).pipe(
+      map((data: any) => {
+        return <Array<PersonajeModel>>data;
+      })
+    );
+  }
 }
