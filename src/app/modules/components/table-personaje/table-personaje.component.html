@@ -1,5 +1,11 @@
-<app-loading *ngIf="!data"></app-loading>
+<label class="flex flex-end" *ngIf="data && data.length > 0">
+	<input type="search" placeholder="nombre"  (keyup)="filtrar($event)"  (change)="filtrar($event)">
+</label>
+<app-loading *ngIf="!dataFilter"></app-loading>
 <h2 *ngIf="data && data.length == 0 ">No se encuentra data</h2>
+
+<h3 class="align-end" *ngIf="data && data.length > 0">{{dataFilter?.length}} resultados</h3>
+
 <table class="table table-striped" *ngIf="data && data.length > 0 ">
 	<thead>
 		<tr>
@@ -11,8 +17,7 @@
 		</tr>
 	</thead>
 	<tbody>
-		<tr *ngFor="let dat of this.data; let i = index ">
-
+		<tr *ngFor="let dat of this.dataFilter; let i = index ">
 			<th scope="row">{{i+1}}</th>
 			<td>{{dat.name}}</td>
 			<td>{{dat.patronus}}</td>

@@ -11,3 +11,17 @@ body {
 img {
   max-width: 100%;
 }
+
+
+.align-end{
+  text-align: end;
+}
+h1{
+  margin: 2rem 0 1rem;
+}
+.flex{
+  display: flex;
+}
+.flex-end{
+  justify-content: flex-end;
+}

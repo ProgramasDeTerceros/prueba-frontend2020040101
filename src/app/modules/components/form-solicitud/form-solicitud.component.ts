@@ -26,7 +26,7 @@ export class FormSolicitudComponent implements OnInit {
   ngOnInit(): void {}
 
   cancel() {
-    this._router.navigate(["/estudiantes", "solicitud"]);
+    this._router.navigate(["/estudiantes", "list-solicitud"]);
   }
   initForm() {
     this.forma = this._fb.group({

@@ -8,8 +8,28 @@ import { PersonajeModel } from "src/app/shared/models/personaje.model";
 })
 export class TablePersonajeComponent implements OnInit {
   @Input() data?: PersonajeModel[];
-
+  public dataFilter?: PersonajeModel[];
+  private filter: string = "";
   constructor() {}
 
   ngOnInit(): void {}
+
+  ngOnChanges() {
+    this.dataChange();
+  }
+
+  dataChange() {
+    if (!this.data) return;
+    this.dataFilter = [
+      ...this.data.filter((x) => {
+        if (this.filter == "") return true;
+        return (<string>x.name).toLowerCase().includes(this.filter);
+      }),
+    ];
+  }
+
+  filtrar(event: any): void {
+    this.filter = (<string>event.target.value).toLowerCase().trim();
+    this.dataChange();
+  }
 }
